@@ -13,7 +13,8 @@ from accountapp.models import NewModel
 def hello_world(request):
     if request.method == "POST":
 
-        temp = request.POST.get('input_text')
+        temp = request.POST.get('next')
+        request.Get.get('next')
 
         new_model = NewModel()
         new_model.text = temp
