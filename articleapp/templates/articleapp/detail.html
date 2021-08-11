@@ -32,9 +32,9 @@
         <hr>
 
         <div class="text-center my-4" style="border: solid; border-color: darkgray">
+
             {# 댓글 작성 #}
             {% for comment in target_article.comment.all %}  {# article과 comment는 1:다 관계이기 때문에 all 필요 #}
-
                 <div class="comment_box">
                     <div>
                         <span class="NNS_B" style="font-size: 1.3rem">
@@ -47,8 +47,18 @@
                             {{ comment.content }}
                         </p>
                     </div>
-                </div>
 
+                    {# Comment 삭제 #}
+                    {% if comment.writer == user %}
+                    <div style="text-align: right">
+                        <a href="{% url 'commentapp:delete' pk=comment.pk %}"
+                           class="btn btn-danger rounded-pill px-3">
+                            Delete
+                        </a>
+                    </div>
+                    {% endif %}
+
+                </div>
             {% endfor %}
         </div>
         <div>
