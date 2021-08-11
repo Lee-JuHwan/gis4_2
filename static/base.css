@@ -51,3 +51,11 @@
     box-shadow: 0 0 1rem gray;
     width: 65%;
 }
+
+.comment_box {
+    text-align: left;
+    border-bottom: solid;
+    border-color: darkgray;
+    padding: 1rem;
+    margin: 1rem;
+}
