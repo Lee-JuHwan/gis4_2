@@ -42,7 +42,8 @@
                         </span>
                         <span>{{ comment.created_at }}</span>
                     </div>
-                    <div>
+                    <div style="border-bottom: solid;
+                                border-color: darkgray;">
                         <p>
                             {{ comment.content }}
                         </p>
@@ -50,7 +51,7 @@
 
                     {# Comment 삭제 #}
                     {% if comment.writer == user %}
-                    <div style="text-align: right">
+                    <div style="text-align: right; margin:0.5rem">
                         <a href="{% url 'commentapp:delete' pk=comment.pk %}"
                            class="btn btn-danger rounded-pill px-3">
                             Delete
