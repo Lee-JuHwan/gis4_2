@@ -86,3 +86,6 @@ media/
 staticfiles/
 
 gis_example1
+
+gis-gcp
+gis-gcp.pub
