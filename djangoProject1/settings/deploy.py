@@ -4,7 +4,7 @@ def read_secret(secret_name):
     file = open('/run/secrets/' + secret_name)
     secret = file.read()
     secret = secret.lstrip().strip()
-    file.closed()
+    file.close()
     return secret
 
 # SECURITY WARNING: keep the secret key used in production secret!
